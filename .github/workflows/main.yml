@@ -24,11 +24,3 @@ jobs:
           prerelease: false
           make_latest: true
           generate_release_notes: true
-      - name: Pre-Release
-        uses: softprops/action-gh-release@v2
-        if: startsWith(github.ref, 'refs/tags/') != true
-        with:
-          files: build/libs/*
-          prerelease: true
-          make_latest: false
-          generate_release_notes: true
